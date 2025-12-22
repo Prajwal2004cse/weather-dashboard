@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- 🔍 Search -->
+<div class="search-bar">
+  <span class="search-icon">🔍</span>
+  <input id="searchInput" placeholder="Search city..." />
+  <button id="searchBtn">Go</button>
+</div>
+
+<div class="dashboard">
+
+  <!-- MAIN CARD -->
+  <div class="card main-card">
+    <h3 id="cityName">📍 --</h3>
+    <h1 id="temp">--°C</h1>
+    <p id="desc">--</p>
+    <small id="date">--</small>
+
+    <!-- 🔥 Nearby Cities -->
+    <div class="nearby-cities" id="nearbyCities"></div>
+  </div>
+
+  <!-- FORECAST STRIP -->
+  <div class="card forecast-strip"></div>
+
+  <!-- 🌧 RAIN PREDICTION (TOP RIGHT) -->
+  <div class="card rain-mini-card">
+    <h4>Chance of Rain</h4>
+    <canvas id="rainChart"></canvas>
+  </div>
+
+  <!-- WEATHER FORECAST GRAPH -->
+  <div class="card graph-card">
+    <h4>Weather Forecast</h4>
+    <div class="chart-wrapper">
+      <canvas id="tempChart"></canvas>
+    </div>
+  </div>
+
+  <!-- SUNRISE & SUNSET -->
+  <div class="card sun-card">
+    <h4>Sunrise and Sunset</h4>
+
+    <div class="sun-row">
+      <div class="sun-icon sunrise"></div>
+      <div>
+        <div class="sun-label">Sunrise</div>
+        <div class="sun-time" id="sunriseTime">--</div>
+      </div>
+    </div>
+
+    <div class="sun-row">
+      <div class="sun-icon sunset"></div>
+      <div>
+        <div class="sun-label">Sunset</div>
+        <div class="sun-time" id="sunsetTime">--</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="card stats-card">
+    <div>💧 Humidity <span>--</span></div>
+    <div>🌬 Wind <span>--</span></div>
+    <div>👁 Visibility <span>--</span></div>
+    <div>🌡 Pressure <span>--</span></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

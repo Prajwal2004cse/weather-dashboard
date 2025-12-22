@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #222, #000);
+  color: white;
+  padding: 20px;
+}
+
+/* Layout */
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 300px 1fr 260px;
+  gap: 16px;
+}
+
+/* Card */
+.card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 16px;
+  backdrop-filter: blur(20px);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05),
+              0 18px 35px rgba(0,0,0,0.45);
+}
+
+/* Main card */
+.main-card {
+  background: linear-gradient(160deg, #ff7a18, #ff9f43);
+  color: #111;
+  grid-row: span 2;
+  min-height: 420px;
+}
+
+.main-card h1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+/* Nearby cities */
+.nearby-cities {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.nearby-city {
+  flex: 1;
+  background: rgba(255,255,255,0.25);
+  border-radius: 14px;
+  padding: 10px 6px;
+  text-align: center;
+  color: #111;
+  font-weight: 600;
+}
+
+.nearby-city span {
+  display: block;
+  font-size: 12px;
+}
+
+.nearby-city strong {
+  font-size: 14px;
+}
+
+/* Search */
+.search-bar {
+  display: flex;
+  gap: 8px;
+  background: rgba(255,255,255,0.12);
+  padding: 8px 12px;
+  border-radius: 14px;
+  max-width: 320px;
+  margin-bottom: 15px;
+}
+
+.search-bar input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+}
+
+.search-bar button {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  border: none;
+  border-radius: 10px;
+  padding: 6px 14px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Forecast strip */
+.forecast-strip {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+/* Graph */
+.graph-card {
+  grid-column: span 2;
+}
+
+.chart-wrapper {
+  height: 150px;
+  margin-top: 10px;
+}
+
+/* Sunrise & Sunset */
+.sun-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.sun-icon {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  color: #f5b041;
+}
+
+.sun-icon::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 3px solid currentColor;
+  border-radius: 50%;
+  left: 7px;
+  top: 5px;
+}
+
+.sun-icon::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 3px;
+  background: currentColor;
+  left: 3px;
+}
+
+.sunrise::after { bottom: 4px; }
+.sunset::after { top: 4px; }
+
+/* Stats */
+.stats-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.stats-card div {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* 🌧 Rain prediction card (top right) */
+.rain-mini-card {
+  max-height: 180px;
+  padding: 14px;
+}
+
+.rain-mini-card h4 {
+  font-size: 13px;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+#rainChart {
+  height: 110px !important;
+  width: 100% !important;
+}
+
