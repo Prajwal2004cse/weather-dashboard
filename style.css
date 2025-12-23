@@ -9,6 +9,7 @@ body {
   background: radial-gradient(circle at top, #222, #000);
   color: white;
   padding: 20px;
+  overflow-x: hidden;
 }
 
 /* Layout */
@@ -180,4 +181,69 @@ body {
   height: 110px !important;
   width: 100% !important;
 }
+
+/* =========================
+   📱 MOBILE (phones)
+========================= */
+@media (max-width: 767px) {
+
+  body {
+    padding: 12px;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .main-card {
+    grid-row: auto;
+    min-height: auto;
+  }
+
+  .forecast-strip {
+    overflow-x: auto;
+    gap: 14px;
+  }
+
+  .forecast-strip .day {
+    min-width: 60px;
+  }
+
+  .graph-card {
+    grid-column: span 1;
+  }
+
+  .stats-card {
+    grid-template-columns: 1fr;
+  }
+
+  .air-card canvas {
+    max-width: 200px;
+    margin: auto;
+  }
+}
+
+/* =========================
+   📲 TABLET (iPad)
+========================= */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .dashboard {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main-card {
+    grid-row: span 1;
+  }
+
+  .graph-card {
+    grid-column: span 2;
+  }
+}
+
 
